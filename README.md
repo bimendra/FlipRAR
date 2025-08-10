@@ -2,7 +2,7 @@
 
 FlipRAR is a minimal Windows desktop application built with **WPF (.NET)** that lets you view comic book or image-based archive files with a thumbnail sidebar and a main page display.
 
-![Screenshot](screenshot.png)
+![Screenshot](Screenshot.png)
 
 ---
 
