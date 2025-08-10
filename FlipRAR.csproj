@@ -9,7 +9,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\first.png" />
+    <None Remove="Assets\last.png" />
+    <None Remove="Assets\next.png" />
+    <None Remove="Assets\prev.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="SharpCompress" Version="0.40.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\first.png" />
+    <Resource Include="Assets\last.png" />
+    <Resource Include="Assets\next.png" />
+    <Resource Include="Assets\prev.png" />
   </ItemGroup>
 
 </Project>

@@ -3,15 +3,13 @@ using System.Text.RegularExpressions;
 
 namespace FlipRAR
 {
-  /// <summary>
-  /// Natural sort for strings that mixes digits and text (e.g., "1, 2, 10").
-  /// </summary>
-  public sealed class NaturalStringComparer : IComparer<string>
+  // Nullable-aware comparer so LINQ OrderBy(..., comparer) is happy
+  public sealed class NaturalStringComparer : IComparer<string?>
   {
-    public static readonly NaturalStringComparer Instance = new NaturalStringComparer();
-    private static readonly Regex Chunk = new Regex(@"(\d+)|(\D+)", RegexOptions.Compiled);
+    public static readonly NaturalStringComparer Instance = new();
+    private static readonly Regex Chunk = new(@"(\d+)|(\D+)", RegexOptions.Compiled);
 
-    public int Compare(string x, string y)
+    public int Compare(string? x, string? y)
     {
       if (ReferenceEquals(x, y)) return 0;
       if (x is null) return -1;
@@ -20,8 +18,7 @@ namespace FlipRAR
       var mx = Chunk.Matches(x);
       var my = Chunk.Matches(y);
 
-      int i = 0;
-      for (; i < mx.Count && i < my.Count; i++)
+      for (int i = 0; i < mx.Count && i < my.Count; i++)
       {
         var a = mx[i].Value;
         var b = my[i].Value;
