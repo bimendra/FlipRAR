@@ -7,10 +7,10 @@ FlipRAR is a minimal Windows desktop application built with **WPF (.NET)** that 
 ---
 
 ## Features
-- Thumbnail sidebar � scrollable list of all pages for quick navigation.
-- Main page display � displays the selected page in detail.
-- Simple navigation � easily switch between pages.
-- Basic menu structure � file menu placeholder for future file operations.
+- Thumbnail sidebar - scrollable list of all pages for quick navigation.
+- Main page display - displays the selected page in detail.
+- Simple navigation - easily switch between pages.
+- Basic menu structure - file menu placeholder for future file operations.
 
 ---
 
@@ -49,4 +49,4 @@ This project served as a small experiment to understand:
 ---
 
 ## License
-This project is licensed under the MIT License � see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
